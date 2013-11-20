@@ -1,9 +1,9 @@
 class DonateController < ApplicationController
 
+
   def index
-    respond_to do |format|
-        format.html
-    end
+    @users = User.all
+    render "donate/index", :locals => {:users => @users}
   end
 
   #POST function to process a donation
@@ -14,8 +14,10 @@ class DonateController < ApplicationController
 
   def users_donations
     #Need to grab the user details
-    @username = :username
-    render "users_donations", :locals => {:username => params[:username]}
+    username = params[:username]
+    @user = User.where("lower(username) = ?", username.downcase).first
+
+    render "users_donations", :locals => {:user => @user}
   end
 
   #GET Page called after a donation has been made

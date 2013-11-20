@@ -1,3 +1,9 @@
 <div>
   <h1>TOTAL £xxx.xx</h1>
 </div>
+<div>
+  <h4>Hall of Fame</h4>
+  <% @users.each do |t| %>
+      <a href="/donate/<%= t.username %>"> <%= t.username %> £xx.xxx </a>
+  <% end %>
+</div>

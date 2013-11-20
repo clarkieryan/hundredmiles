@@ -1,0 +1,15 @@
+// Place all the styles related to the admin_console controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "susy";
+
+#container > ul {
+  @include span-columns(5,12);
+
+  list-style: none;
+
+  &:last-child {
+    @include span-columns(5 omega, 12);
+  }
+}

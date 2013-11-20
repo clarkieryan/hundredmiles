@@ -6,11 +6,19 @@ Hundredmiles::Application.routes.draw do
   root 'static#index'
   get 'about' => 'static#about'
 
-
+  get 'donate' => 'donate#index'
   post 'donate' => 'donate#donate'
   get 'donate/:username' => 'donate#users_donations'
 
   get 'thanks' =>'donate#thanks'
+
+
+  namespace :admin do
+    root 'admin_console#index'
+    resources :users
+
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
