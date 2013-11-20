@@ -8,6 +8,7 @@ Hundredmiles::Application.routes.draw do
 
 
   post 'donate' => 'donate#donate'
+  get 'donate/:username' => 'donate#users_donations'
 
   get 'thanks' =>'donate#thanks'
   # Example of regular route:
