@@ -1,0 +1,27 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "susy";
+
+#slider {
+  //Center align the div
+  @include prefix(1);
+  @include suffix(1);
+  @include span-columns(10 omega, 12);
+
+  height: 400px;
+
+}
+
+#content {
+  @include prefix(1);
+  @include suffix(1);
+  @include span-columns(10 omega, 12);
+  div {
+    @include span-columns(6, 10);
+    &:last-child {
+     @include span-columns(3 omega, 10);
+    }
+  }
+}
