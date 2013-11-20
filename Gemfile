@@ -6,8 +6,11 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+#Include
+gem 'sass-rails' # if running rails 3.1 or greater
+gem "compass-rails", "~> 2.0.alpha.0"
+gem "susy"
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -31,6 +34,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+#Install compass
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
