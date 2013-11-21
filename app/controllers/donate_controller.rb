@@ -1,6 +1,5 @@
 class DonateController < ApplicationController
 
-
   def index
     @users = User.all
     render "donate/index", :locals => {:users => @users}

@@ -1,5 +1,7 @@
 class Admin::UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  #Ensure the user is authenticated
+  http_basic_authenticate_with name: "ryan", password: "O3aaq9es"
 
   # GET /users
   # GET /users.json

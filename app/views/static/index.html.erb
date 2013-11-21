@@ -1,5 +1,5 @@
 <div id="slider">
-    <h1>This is the slider</h1>
+    <h1>Total £<%= @donations.total_donations %></h1>
 </div>
 <div id="content">
   <div>
@@ -12,11 +12,9 @@
   <div>
     <h3>Supporters</h3>
     <ul>
-      <li>£30 - Ryan Clarke</li>
-      <li>£30 - Ryan Clarke</li>
-      <li>£30 - Ryan Clarke</li>
-      <li>£30 - Ryan Clarke</li>
-      <li>£30 - Ryan Clarke</li>
+      <% @donations.last(10).each do |t| %>
+        <li>£<%= t.amount %> - <%= t.name %></li>
+      <% end %>
     </ul>
   </div>
 </div>

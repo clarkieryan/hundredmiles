@@ -16,6 +16,7 @@ Hundredmiles::Application.routes.draw do
   namespace :admin do
     root 'admin_console#index'
     resources :users
+    resources :donations
 
   end
 
